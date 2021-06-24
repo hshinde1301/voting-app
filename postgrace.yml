@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgrace-pod
+  labels:
+    name: postgrace-pod
+    app: voting-app
+	
+spec:
+  containers:
+  - name: postgrace
+    image: postgrace:9.4
+    ports:
+      containerPort: 5432
+   
